@@ -35,3 +35,278 @@ If you get an error at the `import bs4` line, then you will need to grab the Bea
 This library is for parsing JavaScript code.
 
 If you get an error at the `import esprima` line, then you will need to grab the Esprima library for your Python environment. You can install that using `pip install esprima`.
+
+## Sample Output
+Here’s the JSON output produced by a sample run of the tool.
+
+    {
+        "4k4u-823g": {
+            "name": "Water and Sewer Permits",
+            "link": "https://data.cityofnewyork.us/Environment/Water-and-Sewer-Permits/4k4u-823g",
+            "category": "Environment",
+            "type": "Dataset",
+            "description": "The DEP Application and Permit data will contain information about the different types of applications approved and permits issued on a regular basis.",
+            "tags": [
+                "sewer",
+                "water",
+                "permit"
+            ],
+            "updated": 1628176338,
+            "apiDocLink": "https://dev.socrata.com/foundry/data.cityofnewyork.us/4k4u-823g",
+            "dataDownloads": [
+                {
+                    "contentUrl": "https://data.cityofnewyork.us/api/views/4k4u-823g/rows.csv?accessType=DOWNLOAD",
+                    "encodingFormat": "text/csv"
+                },
+                {
+                    "contentUrl": "https://data.cityofnewyork.us/api/views/4k4u-823g/rows.csv?accessType=DOWNLOAD&bom=true&format=true",
+                    "encodingFormat": "text/csv"
+                },
+                {
+                    "contentUrl": "https://data.cityofnewyork.us/api/views/4k4u-823g/rows.csv?accessType=DOWNLOAD&bom=true&delimiter=%3B&format=true",
+                    "encodingFormat": "text/csv"
+                },
+                {
+                    "contentUrl": "https://data.cityofnewyork.us/api/views/4k4u-823g/rows.json?accessType=DOWNLOAD",
+                    "encodingFormat": "application/json"
+                },
+                {
+                    "contentUrl": "https://data.cityofnewyork.us/api/views/4k4u-823g/rows.rdf?accessType=DOWNLOAD",
+                    "encodingFormat": "application/rdfxml"
+                },
+                {
+                    "contentUrl": "https://data.cityofnewyork.us/api/views/4k4u-823g/rows.rss?accessType=DOWNLOAD",
+                    "encodingFormat": "application/rssxml"
+                },
+                {
+                    "contentUrl": "https://data.cityofnewyork.us/api/views/4k4u-823g/rows.tsv?accessType=DOWNLOAD&bom=true",
+                    "encodingFormat": "text/tab-separated-values"
+                },
+                {
+                    "contentUrl": "https://data.cityofnewyork.us/api/views/4k4u-823g/rows.xml?accessType=DOWNLOAD",
+                    "encodingFormat": "application/xml"
+                }
+            ],
+            "attachments": {
+                "Data_Dictionary-DEP Water and Sewer Permits.xlsx": "https://data.cityofnewyork.us/api/views/4k4u-823g/files/360b70a9-8cd4-4bed-a25d-1987fdc6ba8b?download=true&filename=Data_Dictionary-DEP Water and Sewer Permits.xlsx"
+            },
+            "columns": [
+                {
+                    "name": "borough",
+                    "type": "number",
+                    "humanName": "BOROUGH"
+                },
+                {
+                    "name": "borough_name",
+                    "type": "text",
+                    "humanName": "Borough Name"
+                },
+                {
+                    "name": "block",
+                    "type": "number",
+                    "humanName": "BLOCK"
+                },
+                {
+                    "name": "lot",
+                    "type": "number",
+                    "humanName": "LOT"
+                },
+                {
+                    "name": "zip",
+                    "type": "number",
+                    "humanName": "ZIP"
+                },
+                {
+                    "name": "serv_order_type",
+                    "type": "text",
+                    "humanName": "SERV_ORDER_TYPE"
+                },
+                {
+                    "name": "permit_description",
+                    "type": "text",
+                    "humanName": "Permit Description"
+                },
+                {
+                    "name": "permit_no",
+                    "type": "number",
+                    "humanName": "PERMIT_NO"
+                },
+                {
+                    "name": "dateissued",
+                    "type": "calendar_date",
+                    "humanName": "DATEISSUED"
+                }
+            ]
+        },
+        "bvug-v3mm": {
+            "name": "Clergy Parking Permits",
+            "link": "https://data.cityofnewyork.us/Transportation/Clergy-Parking-Permits/bvug-v3mm",
+            "category": "Transportation",
+            "type": "Dataset",
+            "description": "Issued to members of the clergy for parking their personal passenger vehicles when conducting ministerial duties at their houses of worship, funeral establishments or hospitals. Allows parking for up to five hours in No Parking Zones adjacent to their houses of worship, four hours adjacent to a funeral home and up to three hours adjacent to hospitals.",
+            "tags": [
+                "permit",
+                "parking",
+                "clergy",
+                "application"
+            ],
+            "updated": 1630667413,
+            "apiDocLink": "https://dev.socrata.com/foundry/data.cityofnewyork.us/bvug-v3mm",
+            "dataDownloads": [
+                {
+                    "contentUrl": "https://data.cityofnewyork.us/api/views/bvug-v3mm/rows.csv?accessType=DOWNLOAD",
+                    "encodingFormat": "text/csv"
+                },
+                {
+                    "contentUrl": "https://data.cityofnewyork.us/api/views/bvug-v3mm/rows.csv?accessType=DOWNLOAD&bom=true&format=true",
+                    "encodingFormat": "text/csv"
+                },
+                {
+                    "contentUrl": "https://data.cityofnewyork.us/api/views/bvug-v3mm/rows.csv?accessType=DOWNLOAD&bom=true&delimiter=%3B&format=true",
+                    "encodingFormat": "text/csv"
+                },
+                {
+                    "contentUrl": "https://data.cityofnewyork.us/api/geospatial/bvug-v3mm?method=export&format=GeoJSON",
+                    "encodingFormat": "text/csv"
+                },
+                {
+                    "contentUrl": "https://data.cityofnewyork.us/api/geospatial/bvug-v3mm?method=export&format=KML",
+                    "encodingFormat": "text/csv"
+                },
+                {
+                    "contentUrl": "https://data.cityofnewyork.us/api/geospatial/bvug-v3mm?method=export&format=KMZ",
+                    "encodingFormat": "text/csv"
+                },
+                {
+                    "contentUrl": "https://data.cityofnewyork.us/api/views/bvug-v3mm/rows.rdf?accessType=DOWNLOAD",
+                    "encodingFormat": "application/rdfxml"
+                },
+                {
+                    "contentUrl": "https://data.cityofnewyork.us/api/views/bvug-v3mm/rows.rss?accessType=DOWNLOAD",
+                    "encodingFormat": "application/rssxml"
+                },
+                {
+                    "contentUrl": "https://data.cityofnewyork.us/api/geospatial/bvug-v3mm?method=export&format=Shapefile",
+                    "encodingFormat": "text/csv"
+                },
+                {
+                    "contentUrl": "https://data.cityofnewyork.us/api/views/bvug-v3mm/rows.tsv?accessType=DOWNLOAD&bom=true",
+                    "encodingFormat": "text/tab-separated-values"
+                },
+                {
+                    "contentUrl": "https://data.cityofnewyork.us/api/views/bvug-v3mm/rows.xml?accessType=DOWNLOAD",
+                    "encodingFormat": "application/xml"
+                }
+            ],
+            "attachments": {
+                "Clergy_Parking_Permits_Open_Data_Dictionary.xlsx": "https://data.cityofnewyork.us/api/views/bvug-v3mm/files/99c419c0-9f3c-4403-bd0b-1ad7b5bab9ed?download=true&filename=Clergy_Parking_Permits_Open_Data_Dictionary.xlsx"
+            },
+            "columns": [
+                {
+                    "name": "houseofworship",
+                    "type": "text",
+                    "humanName": "HouseOfWorship"
+                },
+                {
+                    "name": "streetaddress",
+                    "type": "text",
+                    "humanName": "StreetAddress"
+                },
+                {
+                    "name": "city",
+                    "type": "text",
+                    "humanName": "City"
+                },
+                {
+                    "name": "state",
+                    "type": "text",
+                    "humanName": "State"
+                },
+                {
+                    "name": "postcode",
+                    "type": "text",
+                    "humanName": "Postcode"
+                },
+                {
+                    "name": "entrydate",
+                    "type": "calendar_date",
+                    "humanName": "EntryDate"
+                },
+                {
+                    "name": "permitnumber",
+                    "type": "text",
+                    "humanName": "PermitNumber"
+                },
+                {
+                    "name": "dateissue",
+                    "type": "calendar_date",
+                    "humanName": "DateIssue"
+                },
+                {
+                    "name": "dateexpiry",
+                    "type": "calendar_date",
+                    "humanName": "DateExpiry"
+                },
+                {
+                    "name": "permitstatus",
+                    "type": "text",
+                    "humanName": "PermitStatus"
+                },
+                {
+                    "name": "permittype",
+                    "type": "text",
+                    "humanName": "PermitType"
+                },
+                {
+                    "name": "borough",
+                    "type": "text",
+                    "humanName": "Borough"
+                },
+                {
+                    "name": "latitude",
+                    "type": "number",
+                    "humanName": "Latitude"
+                },
+                {
+                    "name": "longitude",
+                    "type": "number",
+                    "humanName": "Longitude"
+                },
+                {
+                    "name": "community_board",
+                    "type": "number",
+                    "humanName": "Community Board"
+                },
+                {
+                    "name": "council_district",
+                    "type": "number",
+                    "humanName": "Council District"
+                },
+                {
+                    "name": "census_tract",
+                    "type": "number",
+                    "humanName": "Census Tract"
+                },
+                {
+                    "name": "bin",
+                    "type": "number",
+                    "humanName": "BIN"
+                },
+                {
+                    "name": "bbl",
+                    "type": "number",
+                    "humanName": "BBL"
+                },
+                {
+                    "name": "nta",
+                    "type": "text",
+                    "humanName": "NTA"
+                },
+                {
+                    "name": "geocoded_column",
+                    "type": "point",
+                    "humanName": "Location"
+                }
+            ]
+        }
+    }
