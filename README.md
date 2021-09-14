@@ -1,8 +1,11 @@
 # NYC OpenData Search Results Scraper
-This tool, a Jupyter notebook, scrapes the data set search results page(s) of NYC OpenData’s website.
+This tool scrapes the search results page(s) of NYC OpenData’s website and then visits each item’s page to retrieve additional details such as the download links for the data set or any attachments related to it.
 
-## What it Gives You
-It extracts the data from the first results page and all subsequent pages until it cannot find a link to the next page. For each page, it looks for the result elements and maps each one to a dictionary. The dictionary schema is as follows:
+## How to Use
+The notebook is divided into several cells, the first of which provides the functions used by the rest of the notebook. Set the URL to the results page you want to scrape. Then run the cells in order. The second cell extracts search results, the third one extracts additional details about each result, and the fourth saves the scraped data into a pickle file.
+
+### Getting the Search Results
+It extracts the data from the first results page and all subsequent pages until it cannot find a link to the following page. For each page, it looks for the result elements and maps each one to a dictionary. The dictionary schema is as follows:
 * **name** (string): the name of the item
 * **link** (string): the link to the page with more information about the item
 * **category** (string): the category of the item (e.g., *Education*)
@@ -12,10 +15,23 @@ It extracts the data from the first results page and all subsequent pages until 
 * **updated** (integer): the UNIX timestamp which this item was last updated
 * **apiDocLink** (string): a link to the API documentation (which might possibly be used to extract more metadata about the item)
 
-The resulting dictionaries are returned in a list.
+## Getting the Data Set Details
+It extracts additional information about the items using the links to the items’ pages. It adds the following keys if the information is available:
+* **attachments** (dict of strings): key-value pairs of file names and their corresponding links to download them
+* **columns** (list of dicts): an ordered list of dicts representing column metadata
+* **dataDownloads** (list of dicts of strings): a list of key-value pairs where the key is the file name and the value is the link to its URL
 
-## How to Use
-Set the URL to the results page you want to scrape. Then run the cells in order if you just want to extract the search results. But the output of the `get_data` function can be fed to your own custom code for additional processing.
+In the case where download of data set details is interrupted, run the cell again and the code will attempt to resume progress. Simply, it checks each item for the existence of the additional dictionary keys. If they don’t exist, the code tries to retrieve them again and amends the dictionary with any additional information it finds.
 
-## Missing the BeautifulSoup Library?
-If you get any errors at the `import bs4` line, then you will need to grab the BeautifulSoup library for your Python environment. You can install that using `pip install beautifulsoup4`. Detailed instructions here: https://beautiful-soup-4.readthedocs.io/en/latest/#installing-beautiful-soup
+## Missing Libraries?
+This notebook was developed on Google’s Colaboratory platform. Your environment may not have the same libraries preinstalled. If any of the `import` statements fail, you are probably missing some libraries.
+
+### BeautifulSoup
+This library is for parsing HTML code, obiviating the need for unwiedly/fragile regular expressions. Much of the information can be gleaned from the HTML alone.
+
+If you get an error at the `import bs4` line, then you will need to grab the BeautifulSoup library for your Python environment. You can install that using `pip install beautifulsoup4`. Detailed instructions here: https://beautiful-soup-4.readthedocs.io/en/latest/#installing-beautiful-soup
+
+### Esprima
+This library is for parsing JavaScript code.
+
+If you get an error at the `import esprima` line, then you will need to grab the Esprima library for your Python environment. You can install that using `pip install esprima`.
